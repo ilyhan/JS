@@ -20,9 +20,9 @@ async function getCards(path) {
 async function loadCards() {
   //в процессе работы с jsonplaceholder столкнулся с проблемой: долгая загрузка и в результате ошибка
   //в связи с этим создал моковые данные на mockapi (всего хранится порядка 50 записей о карточках)
-  // const data = await getCards('https://jsonplaceholder.typicode.com/photos');
+  // const data = await getCards("https://6733842ea042ab85d117200e.mockapi.io/photos");
 
-  const data = await getCards("https://6733842ea042ab85d117200e.mockapi.io/photos");
+  const data = await getCards('https://jsonplaceholder.typicode.com/photos');
 
   if (data) {
     const templateCard = document.getElementById('card');
