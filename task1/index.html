@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Task1</title>
+</head>
+
+<body>
+    <main class="main">
+        <section id="slider" class="slider">
+            <div id="container" class="slider__cards">
+                <article id="card" class="card unvisible">
+                    <img class="card__image" alt="картинка заглушка">
+                    <p class="card__content"></p>
+                </article>
+            </div>
+
+            <div class="slider__actions">
+                <button id="btn_left" class="button slider__button" type="button" title="прокрутить влево" disabled> 
+                    <img src="./img/arrow.svg" alt="стрелка влево">
+                </button>
+
+                <button id="btn_right" class="button slider__button slider__button_rotate" type="button"
+                    title="прокрутить вправо">
+                    <img src="./img/arrow.svg" alt="стрелка вправо">
+                </button>
+            </div>
+        </section>
+
+        <a href="../task2/index.html">next task</a>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

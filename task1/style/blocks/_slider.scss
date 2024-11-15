@@ -1,0 +1,68 @@
+.slider {
+    width: 100%;
+    overflow-x: hidden;
+
+    &__cards {
+        display: flex;
+        gap: 80px;
+        width: fit-content;
+        margin-bottom: 48px;
+        transition: $transition-def;
+    }
+
+    &__actions {
+        display: flex;
+        gap:20px;
+        width: fit-content;
+        margin-inline: auto 0;
+    }
+
+    &__button {
+        height: 64px;
+        aspect-ratio: 1;
+        background-color: $color-white;
+        border: 1px solid $color-accent;
+        border-radius: 50%;
+
+        &:hover {
+            @media (hover: hover) {
+                background-color: $color-accent;
+            }
+        }
+
+        &:active {
+            scale: 0.95;
+            opacity: 0.9;
+        }
+
+        &:disabled {
+            background-color: $color-disabled;
+            
+            &:hover {
+                background-color: $color-disabled;
+            }
+    
+            &:active {
+                scale: none; 
+                opacity: 1;  
+            }
+        }
+
+        &_rotate {
+            rotate: 180deg;
+        }
+    }
+
+}
+
+@media (max-width: $mobile-breakpoints) {
+    .slider {
+        &__cards{
+            gap: 60px;
+        }
+
+        &__button {
+            height: 50px;
+        }
+    }
+}

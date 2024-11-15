@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>task4</title>
+</head>
+
+<body>
+    <main class="main">
+        <section class="currency-rates">
+            <header class="currency-rates__header">
+                <h2 class="currency-rates__title">
+                    Exchange rate in internet bank
+                </h2>
+
+                <span id="update-time" class="currency-rates__update">
+                    Update every 15 minutes, MSC 12.11.2022
+                </span>
+            </header>
+
+            <h3 class="currency-rates__subtitle">Currency</h3>
+
+            <div class="currency-rates__info-warpper">
+                <ul id="currency-list" class="currency-rates__list">
+                    <!-- Данные с сервера -->
+                </ul>
+
+                <img src="./img/bank.png" class="currency-rates__image" alt="bank">
+            </div>
+
+            <footer>
+                <a href="https://cbr.ru/currency_base/daily/" class="link currency-rates__link" target="_blank">
+                    All courses
+                </a>
+            </footer>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="./script.js" defer></script>
+</body>
+
+</html>

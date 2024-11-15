@@ -1,0 +1,11 @@
+.button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: $transition-def;
+    @include flexCenter;
+
+    &:disabled{
+        cursor: not-allowed;
+    }
+}

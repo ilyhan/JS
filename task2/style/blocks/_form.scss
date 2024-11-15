@@ -1,0 +1,109 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    border-radius: 28px;
+    box-shadow: $shadow-def;
+    background-color: $color-white;
+    padding: 32px;
+
+    &__title {
+        @include clampText($text-m-title, $text-title);
+        margin: 0;
+    }
+
+    &__group {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        @include clampText($text-m-main, $text-main);
+        margin-bottom: 8px;
+        font-weight: 500;
+
+        &::after {
+            content: ' *';
+            color: $color-red;
+        }
+    }
+
+    &__input-wrapper {
+        position: relative;
+        margin-bottom: 20px;
+
+        &_error {
+            &::after {
+                @include afterIcon;
+                background: url('.././img/error.svg');
+            }
+        }
+
+        &_success {
+            &::after {
+                @include afterIcon;
+                background: url('.././img/success.svg');
+            }
+        }
+    }
+
+    &__input {
+        @include clampText($text-m-main, $text-main);
+        position: relative;
+        height: 40px;
+        width: 100%;
+        border: 1px solid $color-border;
+        background-color: $color-input;
+        border-radius: 6px;
+        padding-inline: 16px 30px;
+        outline: none;
+        transition: $transition-def;
+
+        &:focus {
+            border-color: $color-focus;
+        }
+
+        &::placeholder {
+            color: $color-placeholder;
+        }
+
+        &_error {
+            border-color: $color-error;
+        }
+    }
+
+    &__error {
+        @include clampText($text-small, $text-main);
+        position: absolute;
+        color: $color-error;
+        bottom: 0px;
+    }
+
+    &__button {
+        height: 48px;
+        width: 148px;
+        border-radius: 8px;
+        font-weight: 700;
+        color: $color-white;
+        background-color: $color-btn;
+        margin-inline: auto 0;
+
+        &:hover {
+            @media(hover: hover) {
+                background-color: $color-hover;
+            }
+        }
+
+        &:active {
+            translate: 0 2px;
+            opacity: 0.9;
+        }
+    }
+}

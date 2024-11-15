@@ -1,0 +1,11 @@
+@mixin clampText($min, $max) {
+    font-size: clamp(#{$min}px,
+        #{$max / 1024 * 100}vw,
+        #{$max}px);
+}
+
+@mixin flexBetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

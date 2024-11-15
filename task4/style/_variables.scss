@@ -1,0 +1,29 @@
+//шрифт
+$text-title: 24;
+$text-m-title: 20;
+$text-subtitle: 20;
+$text-m-subtitle: 16;
+$text-main: 16;
+$text-m-main: 14;
+
+//эффекты
+$transition-def: 0.3s ease;
+
+//цвета
+$color-background: #F5F4FF;
+$color-black: #000;
+$color-white: #fff;
+$color-currency: #808080;
+$color-hover: #ececec;
+$color-active: #e1e1e1;
+
+//background gradient
+$gradient-def: 
+linear-gradient(358.2deg, rgba(178, 178, 178, 0.8) 8.06%, rgba(178, 178, 178, 0) 67.93%),  
+linear-gradient(0deg, rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.9));
+
+//тень 
+$shadow-def: 0px 2px 4px 0px #00000033;
+
+//Парамеры размера экрана
+$mobile-breakpoints: 720px;

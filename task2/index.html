@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>task2</title>
+</head>
+
+<body>
+    <main class="main">
+        <form id="form" class="form">
+            <h2 class="form__title">Contact Information</h2>
+
+            <div class="form__group-wrapper">
+                <div class="form__group">
+                    <label for="username" class="form__label">FIO</label>
+                    <div id="name-wrapper" class="form__input-wrapper">
+                        <input type="text" id="username" class="form__input" placeholder="For example Doe" required>
+                    </div>
+                    <span id="name-error" class="form__error"></span>
+                </div>
+
+                <div class="form__group">
+                    <label for="password" class="form__label">Your password</label>
+                    <div id="password-wrapper" class="form__input-wrapper">
+                        <input type="password" id="password" class="form__input" placeholder="Enter the password" required>
+                    </div>
+                    <span id="password-error" class="form__error"></span>
+                </div>
+            </div>
+
+            <button class="button form__button" type="submit">
+                Continue
+            </button>
+        </form>
+
+        <a href="../task1/index.html">prev task</a>
+        <a href="../task3/index.html">next task</a>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
