@@ -11,7 +11,7 @@ let maxScroll;
 async function getCards(path) {
   try {
     const response = await axios.get(path);
-    return data = response.data;
+    return data = response.data.results;
   } catch {
     alert('Ошибка загрузки данных');
   }
@@ -19,10 +19,8 @@ async function getCards(path) {
 
 async function loadCards() {
   //в процессе работы с jsonplaceholder столкнулся с проблемой: долгая загрузка и в результате ошибка
-  //в связи с этим создал моковые данные на mockapi (всего хранится порядка 50 записей о карточках)
-  // const data = await getCards("https://6733842ea042ab85d117200e.mockapi.io/photos");
-
-  const data = await getCards('https://jsonplaceholder.typicode.com/photos');
+  //в связи с этим нашел другую апи
+  const data = await getCards("https://api.unsplash.com/search/photos/?page=2&query=wallpaper&client_id=xz5MUitr6CDevL5gRiAEXSHVeD14I4XYpSLvv6zTd2s");
 
   if (data) {
     const templateCard = document.getElementById('card');
@@ -31,11 +29,11 @@ async function loadCards() {
       const clonedCard = templateCard.cloneNode(true);
 
       const img = clonedCard.querySelector('.card__image');
-      img.src = item.url;
-      img.alt = item.title;
+      img.src = item.urls.full;
+      img.alt = item.alt_description;
 
       const p = clonedCard.querySelector('.card__content');
-      p.textContent = item.title;
+      p.textContent = item.alt_description;
 
       clonedCard.classList.remove('unvisible');
 
